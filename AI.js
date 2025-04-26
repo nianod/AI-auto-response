@@ -104,8 +104,7 @@ zokou({ nomCom: "gpt", reaction: "🤔", categorie: "IA" }, async (dest, zk, com
         return repondre(`Please ask a question.`);
       }
   
-      // Regrouper les arguments en une seule chaîne séparée par "-"
-      const question = arg.join(' ');
+       const question = arg.join(' ');
       const response = await axios.get(`https://gpt4.giftedtech.workers.dev/?prompt=${question}`);
       
       const data = response.data;
